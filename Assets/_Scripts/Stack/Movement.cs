@@ -7,8 +7,7 @@ namespace Aezakmi.Stack
         public float MoveSpeed;
         public bool MovingOnZ = true;
         public bool CanMove = true;
-        
-        private bool ReverseDirection = false;
+        public bool ReverseDirection = false;
 
         private void Update()
         {

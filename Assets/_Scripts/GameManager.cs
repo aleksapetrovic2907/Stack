@@ -12,7 +12,12 @@ namespace Aezakmi
             if (current != this) current = this;
         }
         #endregion
-        
+
         public Vector2 StackReversePositions; // x being the minimum, y being the maximum
+
+        private void Start()
+        {
+            // InputManager.OnTap += delegate { Debug.Log("works"); };
+        }
     }
 }
