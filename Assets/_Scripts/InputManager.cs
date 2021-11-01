@@ -5,7 +5,6 @@ namespace Aezakmi
 {
     public class InputManager : MonoBehaviour
     {
-        public static event Action OnTap;
         private Touch _touch;
 
         private void Update()
@@ -14,11 +13,11 @@ namespace Aezakmi
             {
                 _touch = Input.GetTouch(0);
                 if (_touch.phase == TouchPhase.Began)
-                    if (OnTap != null) OnTap();
+                    EventManager.current.Tapped();
             }
 
             if (Input.GetKeyDown(KeyCode.Space))
-                if (OnTap != null) OnTap();
+                EventManager.current.Tapped();
         }
     }
 }
